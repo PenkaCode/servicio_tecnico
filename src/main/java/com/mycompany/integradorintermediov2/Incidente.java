@@ -135,7 +135,6 @@ public class Incidente {
             statement.executeUpdate();
 
             // Obtener el ID generado para el incidente
-            // (Este paso es opcional, pero puede ser útil obtener el ID del incidente recién creado)
             try (var generatedKeys = statement.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
                     idIncidente = generatedKeys.getLong(1);

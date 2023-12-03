@@ -63,7 +63,7 @@ public class Especialidad {
         System.out.println("Ingrese el tipo de especialidad:");
         String tipoEspecialidad = scanner.next();
 
-        // Llamamos al método para insertar la especialidad en la base de datos
+        // Llama al método para insertar la especialidad en la base de datos
         long idEspecialidad = Tecnico.insertarEspecialidad(connection, tipoEspecialidad);
 
         System.out.println("Especialidad ingresada correctamente. ID de especialidad: " + idEspecialidad);

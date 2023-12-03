@@ -56,8 +56,6 @@ public class ConsultasServicio {
             this.fechaResolucion = fechaResolucion;
         }
 
-        // Constructor, getters y setters
-        // ...
         public DatosIncidente(int tecnicoAsignadoId, String estado, LocalDateTime fechaResolucion) {
             this.tecnicoAsignadoId = tecnicoAsignadoId;
             this.estado = estado;
