@@ -1,0 +1,2 @@
+Estimado cliente, el técnico Daniel se encargará de resolver el incidente. Tiempo estimado de resolución: 4 horas. Descripción del problema: Windows
+Estimado cliente, el técnico Santiago se encargará de resolver el incidente. Tiempo estimado de resolución: 4 horas. Descripción del problema: Linux
