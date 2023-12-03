@@ -160,39 +160,10 @@ public class ConsultasServicio {
             }
         }
 
-        // Debugging: Imprimir información de la cantidad de incidentes totales por fecha
+        //Imprimir información de la cantidad de incidentes totales por fecha
         System.out.println("Cantidad de incidentes totales resueltos en la fecha " + fecha + ": " + incidentesTotales);
 
         return incidentesTotales;
     }
 
-
-    /*/  private static int contarIncidentesResueltos(List<Incidente> incidentes) {
-        return (int) incidentes.stream()
-                .filter(incidente -> "Resuelto".equals(incidente.getEstado()))
-                .count();
-    }
-
-    public static int contarIncidentesResueltosEnUltimosDias(List<Tecnico> tecnicos, LocalDate fechaLimite) {
-        return (int) tecnicos.stream()
-                .flatMap(tecnico -> tecnico.getIncidentesAsignados().stream())
-                .filter(incidente -> "Resuelto".equals(incidente.getEstado()) && incidente.getFechaResolucion().toLocalDate().isEqual(fechaLimite))
-                .count();
-    }
-
-    public static void generarReporteDiario(List<Tecnico> tecnicos) {
-        LocalDate fechaActual = LocalDate.now();
-
-        System.out.println("Reporte Diario - " + fechaActual);
-
-        for (Tecnico tecnico : tecnicos) {
-            System.out.println("Técnico: " + tecnico.getNombreCompleto());
-
-            int incidentesResueltos = contarIncidentesResueltosEnUltimosDias(Collections.singletonList(tecnico), fechaActual);
-
-            System.out.println("   Incidentes Resueltos en el último día: " + incidentesResueltos);
-
-            System.out.println(); // Separador entre técnicos
-        }
-    } /*/
 }

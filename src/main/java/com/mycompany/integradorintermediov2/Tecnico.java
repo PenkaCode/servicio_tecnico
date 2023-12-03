@@ -99,8 +99,8 @@ public class Tecnico {
         System.out.println("Ingrese la cantidad de especialidades del técnico:");
         int cantidadEspecialidades = scanner.nextInt();
 
-        for (int i = 1; i < cantidadEspecialidades; i++) {
-            System.out.println("Ingrese el tipo de especialidad " + (i + 1) + ":");
+        for (int i = 1; i <= cantidadEspecialidades; i++) {
+            System.out.println("Ingrese el tipo de especialidad " + i + ":");
             String tipoEspecialidad = scanner.next();
 
             // Consultar si la especialidad ya existe en la base de datos

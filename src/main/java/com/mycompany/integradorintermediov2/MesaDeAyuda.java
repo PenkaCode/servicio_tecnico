@@ -14,11 +14,6 @@ import java.io.PrintWriter;
  */
 public class MesaDeAyuda {
 
-    public static void agregarColchonHorasEstimadas(Incidente incidente, int horasColchon) {
-        // Lógica para agregar "colchón" de horas estimadas al incidente
-        incidente.setTiempoEstimado(incidente.getTiempoEstimado() + horasColchon);
-        System.out.println("Se agregó un colchón de " + horasColchon + " horas al incidente.");
-    }
 
     public static void guardarNotificacionEnArchivo(Tecnico tecnico, String razonSocial, int tiempoEstimado, String descripcionProblema) {
         String mensaje = "Estimado cliente, el técnico " + tecnico.getNombre() + " se encargará de resolver el incidente. "

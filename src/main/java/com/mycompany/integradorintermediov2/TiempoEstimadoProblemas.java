@@ -52,6 +52,7 @@ public class TiempoEstimadoProblemas {
 
     public static void cargarTiposProblemaEnBaseDeDatos(Connection connection) throws SQLException {
         
+        connection.setAutoCommit(false);
         // Consulta SQL para obtener todos los tipos de problema existentes
         String selectExistingSql = "SELECT tipo_problema FROM tipo_problema";
         Set<String> existingProblems = new HashSet<>();
@@ -61,7 +62,7 @@ public class TiempoEstimadoProblemas {
                 existingProblems.add(resultSet.getString("tipo_problema"));
             }
         }
-
+        
         // Agrega tipos de problemas y tiempos de resolución al mapa
         mapaTiemposEstimados.put("Windows", 3);
         mapaTiemposEstimados.put("MAC OS", 4);
@@ -70,6 +71,7 @@ public class TiempoEstimadoProblemas {
         mapaTiemposEstimados.put("SAP", 5);
         mapaTiemposEstimados.put("Tango", 7);
         mapaTiemposEstimados.put("BD MYSQL", 2);
+        mapaTiemposEstimados.put("Server", 1);
 
         // Consulta SQL para insertar nuevos tipos de problemas
         String insertSql = "INSERT INTO tipo_problema (tipo_problema, tiempo_resolucion) VALUES (?, ?)";
@@ -86,7 +88,6 @@ public class TiempoEstimadoProblemas {
             }
         }
 
-        connection.commit();
+        connection.setAutoCommit(true);
     }
-
 }

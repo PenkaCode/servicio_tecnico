@@ -12,7 +12,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import lombok.Data;
@@ -112,7 +111,6 @@ public class Incidente {
             } catch (SQLException e) {
                 System.err.println("Error al cargar los tiempos desde la base de datos:");
                 e.printStackTrace();
-                // Aquí puedes decidir cómo manejar el error, por ejemplo, salir de la aplicación o proporcionar valores predeterminados.
             }
         } else {
             System.out.println("Cliente no encontrado. No se ha ingresado el incidente.");
@@ -151,8 +149,6 @@ public class Incidente {
             System.err.println("Error al ejecutar la consulta SQL en cargarIncidenteEnBaseDeDatos:");
             e.printStackTrace();
         }
-
-        // Puedes seguir usando idIncidente aquí si es necesario.
     }
 
     private String obtenerRazonSocialPorCuit(Connection connection, String cuit) {
@@ -194,5 +190,4 @@ public class Incidente {
             e.printStackTrace(); // Manejo adecuado de la excepción en tu aplicación real
         }
     }
-
 }

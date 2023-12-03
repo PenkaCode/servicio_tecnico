@@ -24,11 +24,11 @@ public class InterfazCarga {
     private static final Scanner scanner = new Scanner(System.in).useDelimiter("\n");
 
     private static List<Tecnico> tecnicos;
-    private static List<DatosIncidente> incidentes; // Agrega esta línea
+    private static List<DatosIncidente> incidentes;
 
     public static void cargarDatosDesdeConsola(Connection connection) throws SQLException {
         tecnicos = ConsultasServicio.obtenerListaDeTecnicosDesdeBD(connection);
-        incidentes = ConsultasServicio.obtenerListaDeIncidentesDesdeBD(connection); // Agrega esta línea
+        incidentes = ConsultasServicio.obtenerListaDeIncidentesDesdeBD(connection);
 
         boolean salir = false;
 
